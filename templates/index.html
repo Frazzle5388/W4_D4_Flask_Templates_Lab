@@ -6,11 +6,25 @@
     <ul>
        <li>{{event.date}}</li> 
        <li>{{event.number_of_guests}}</li> 
-       <li>{{event.room_location}}</li> 
        <li>{{event.description}}</li> 
     </ul>
 
 </div>
     
-{% endfor %}    
+{% endfor %}   
+<form action="/events" method="post">
+    <label for="title">Event Name</label>
+    <input type="text" name="title" id="">
+    <br>
+    <label for="description">Description</label>
+    <textarea name="description" id="description" cols="30" rows="3"></textarea>
+    <br>
+    <label for="title">Number of People</label>
+    <input type="text" name="title" id="">
+    <br>
+    <label for="title">Event Date</label>
+    <input type="text" name="title" id="">
+    <br>
+    <input type="submit" value="Add Event" id="">  
+</form> 
 {% endblock  %}
